@@ -1,0 +1,31 @@
+@media screen and ( max-width: 500px ) {
+    body {
+      background-color: lightblue;
+      color: white;
+    }
+    .main h2 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .main .calc{
+        margin-top: 1rem;
+    }
+    .main .amount input {
+        width: 90vw;
+    }
+    .convert{
+        gap: 1rem;
+    }
+  }
+  @media screen and ( max-width: 768px ){
+    .main h2 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .main .calc{
+        margin-top: 1.5rem;
+    }
+    .convert{
+        gap: 1rem;
+    }
+  }

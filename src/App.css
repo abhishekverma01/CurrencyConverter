@@ -1,3 +1,4 @@
+/* @import url('./mediaQuery.css'); */
 
 *{
     padding: 0;
@@ -8,15 +9,19 @@
 body{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     height: 100vh;
-    background-image: url("./texture.jpg");
+    /* padding: 1rem; */
+    /* background-image: url("./texture.jpg"); */
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     /* background-color: #fce3e3; */
 }
 .main {
-    /* border: 1px solid black; */
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 10px;
 }
 .main h2{
     margin-top: 2rem;
@@ -108,3 +113,17 @@ body{
 .convert button:hover{
     background-color: rgba(46, 46, 240, 0.884);
 }
+
+/* @import url(./mediaQuery.css); */
+/* @import url('./mediaQuery.css'); */
+
+/* .main h2 {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.main .calc{
+    margin-top: 1rem;
+}
+.convert{
+    gap: 1rem;
+} */

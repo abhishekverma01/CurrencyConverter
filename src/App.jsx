@@ -25,8 +25,8 @@ const App = () => {
     // } else {
     //   setNumber(intValue);
     // }
-    const nv = value.replace(/\D/g, '');
-    setNumber(nv);
+    // const nv = value.replace(/\D/g, '');
+    setNumber(value);
   };
    function handleChange(evt){
       const newVal = evt.target.value;
@@ -38,15 +38,31 @@ const App = () => {
   })
    }
    async function giveExchange() {
-      const res = await fetch(url);
-      const data = await res.json();
-      const finalCrate = data.conversion_rate;
-      // console.log(data);
-      setRateText(finalCrate);
-      // console.log(finalCrate);
-      // console.log(rateText);
-      number === '' ? setNumber(1) : setRateText(number*finalCrate);
-
+      try{
+        const res = await fetch(url);
+        const data = await res.json();
+        if(data.result === 'error'){
+          alert('Not Found');
+          setRateText('Not Found');
+        }
+        else{
+        const finalCrate = await data.conversion_rate;
+        console.log(finalCrate);
+        if(number === ''){
+          setRateText(finalCrate);
+          setNumber(1);
+        }
+        else {
+        // console.log(number*finalCrate);
+        setRateText(number*finalCrate);
+        }
+        console.log(number);
+        }
+      }
+      catch(err){
+        alert(err);
+      }
+      // for shadow change
       const len = shadows.length;
       const random = Math.floor(Math.random()*len);
       setShadow(shadows[random]);
